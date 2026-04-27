@@ -1,0 +1,113 @@
+{
+  "package_name": "crystals_beverage_catering_build_package",
+  "version": "0.1",
+  "created_utc": "2026-04-27T14:40:06.315679Z",
+  "workflow": "ChatGPT zip -> user local repo -> Claude Code local build -> GitHub -> Vercel",
+  "active_source_directory": "website/",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 1724
+    },
+    {
+      "path": "claude_prompts/01_build_local_static_site.md",
+      "bytes": 1106
+    },
+    {
+      "path": "claude_prompts/02_pre_github_review.md",
+      "bytes": 345
+    },
+    {
+      "path": "claude_prompts/03_github_vercel_handoff.md",
+      "bytes": 363
+    },
+    {
+      "path": "documentation/asset_manifest.md",
+      "bytes": 639
+    },
+    {
+      "path": "documentation/build_review.md",
+      "bytes": 331
+    },
+    {
+      "path": "documentation/deployment_notes.md",
+      "bytes": 739
+    },
+    {
+      "path": "documentation/implementation_notes.md",
+      "bytes": 407
+    },
+    {
+      "path": "planning/asset_plan.md",
+      "bytes": 1054
+    },
+    {
+      "path": "planning/brand_profile.md",
+      "bytes": 697
+    },
+    {
+      "path": "planning/content_plan.md",
+      "bytes": 4183
+    },
+    {
+      "path": "planning/conversion_plan.md",
+      "bytes": 812
+    },
+    {
+      "path": "planning/design_direction.md",
+      "bytes": 632
+    },
+    {
+      "path": "planning/handoff_instructions.md",
+      "bytes": 817
+    },
+    {
+      "path": "planning/legal_claims_review.md",
+      "bytes": 953
+    },
+    {
+      "path": "planning/owner_questions.md",
+      "bytes": 698
+    },
+    {
+      "path": "planning/project_brief.md",
+      "bytes": 1381
+    },
+    {
+      "path": "planning/qa_checklist.md",
+      "bytes": 952
+    },
+    {
+      "path": "planning/seo_plan.md",
+      "bytes": 1548
+    },
+    {
+      "path": "planning/site_architecture.md",
+      "bytes": 422
+    },
+    {
+      "path": "planning/technical_spec.md",
+      "bytes": 870
+    },
+    {
+      "path": "website/README_IMPLEMENTATION.md",
+      "bytes": 259
+    },
+    {
+      "path": "website/assets/README_ASSETS.md",
+      "bytes": 267
+    },
+    {
+      "path": "website/assets/favicon.svg",
+      "bytes": 269
+    },
+    {
+      "path": "website/assets/owner-crystal-bruce.jpeg",
+      "bytes": 37594
+    },
+    {
+      "path": "website/data/site-config.json",
+      "bytes": 539
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Crystal's Beverage Catering Service",
+  "short_name": "Crystal's Catering",
+  "description": "Upscale beverage catering for private events across Alabama, Tennessee, Mississippi, and Georgia.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#2b2723",
+  "theme_color": "#2b2723",
+  "icons": [
+    {
+      "src": "assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

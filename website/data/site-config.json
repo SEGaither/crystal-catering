@@ -1,0 +1,17 @@
+{
+  "businessName": "Crystal\u2019s Beverage Catering Service",
+  "owner": "Crystal Bruce",
+  "phone": "256-614-2510",
+  "phoneHref": "tel:2566142510",
+  "email": "cbruce.dce@gmail.com",
+  "serviceArea": [
+    "Alabama",
+    "Tennessee",
+    "Mississippi",
+    "Georgia"
+  ],
+  "primaryCta": "Request an Event Quote",
+  "secondaryCta": "Check My Event Date",
+  "domainProvisional": "https://CBbeveragecatering.com",
+  "claimBoundary": "Service details, availability, travel, and beverage arrangements are confirmed during consultation."
+}
