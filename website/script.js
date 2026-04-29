@@ -1,4 +1,4 @@
-/* ============================================================
+﻿/* ============================================================
    CRYSTAL'S BEVERAGE CATERING SERVICE — script.js
    Static: no API keys, no external calls, no build system
    ============================================================ */
@@ -100,7 +100,7 @@
   }
 
   function buildMailtoLink() {
-    var subject = "Event Quote Request – Crystal’s Beverage Catering Service";
+    var subject = "Event Quote Request – Crystal's Beverage Catering Service";
 
     var lines = [
       'Name: '           + getVal('name'),
@@ -148,13 +148,13 @@
      AI CHATBOT — async OpenAI-powered responses
   ---------------------------------------------------------- */
   var conversationHistory = [];
-  var CHAT_ERROR_MSG = ‘Something went wrong — you can reach Crystal directly at 256-614-2510 or use the quote form on this page.’;
+  var CHAT_ERROR_MSG = 'Something went wrong — you can reach Crystal directly at 256-614-2510 or use the quote form on this page.';
 
   function addTypingIndicator() {
     if (!chatMsgs) return null;
-    var el = document.createElement(‘div’);
-    el.className = ‘chat-msg bot’;
-    el.textContent = ‘Typing…’;
+    var el = document.createElement('div');
+    el.className = 'chat-msg bot';
+    el.textContent = 'Typing…';
     chatMsgs.appendChild(el);
     chatMsgs.scrollTop = chatMsgs.scrollHeight;
     return el;
@@ -170,25 +170,25 @@
   }
 
   function sendToAI(text, callback) {
-    conversationHistory.push({ role: ‘user’, content: text });
-    fetch(‘/api/chat’, {
-      method: ‘POST’,
-      headers: { ‘Content-Type’: ‘application/json’ },
+    conversationHistory.push({ role: 'user', content: text });
+    fetch('/api/chat', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ messages: conversationHistory })
     })
       .then(function (res) { return res.json(); })
       .then(function (data) {
         if (data.reply) {
-          conversationHistory.push({ role: ‘assistant’, content: data.reply });
+          conversationHistory.push({ role: 'assistant', content: data.reply });
           callback(null, data.reply);
         } else {
           conversationHistory.pop();
-          callback(new Error(‘no reply’));
+          callback(new Error('no reply'));
         }
       })
       .catch(function () {
         conversationHistory.pop();
-        callback(new Error(‘fetch error’));
+        callback(new Error('fetch error'));
       });
   }
 
