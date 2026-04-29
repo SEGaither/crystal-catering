@@ -17,9 +17,9 @@
 
 ## Hero
 
-Headline: Upscale Beverage Catering for Private Events Across the South
+Headline: Private Event Bartender & Beverage Service Across the South
 
-Subheadline: Crystal’s Beverage Catering Service helps hosts create a polished beverage experience for weddings, corporate events, private parties, and special celebrations across Alabama, Tennessee, Mississippi, and Georgia.
+Subheadline: Polished Pours with Crystal provides private event bartender labor, setup support, and guest-focused beverage service for host-supplied beverages at weddings, corporate events, private parties, and special celebrations across Alabama, Tennessee, Mississippi, and Georgia.
 
 Primary CTA: Request an Event Quote
 
@@ -36,6 +36,7 @@ Support line: Custom quotes are prepared based on event details, service needs, 
 
 ## What we help with
 
+- Bartender service for host-supplied beverages
 - Beverage service planning support
 - Guest-focused service flow
 - Setup coordination
@@ -43,19 +44,19 @@ Support line: Custom quotes are prepared based on event details, service needs, 
 - Beverage preferences and service needs discussed during consultation
 - Custom quote based on event details
 
-Do not state who provides beverages. Do not state alcohol service.
+Do not state who provides beverages. Do not state alcohol service. Crystal provides bartender labor and service for host-supplied beverages only.
 
 ## Meet Crystal
 
-Crystal Bruce brings years of beverage service experience to private events across Alabama, Tennessee, Mississippi, and Georgia. As the owner of Crystal’s Beverage Catering Service, she focuses on creating a polished, welcoming beverage experience that feels organized, personal, and appropriate for the occasion.
+Crystal Bruce brings years of beverage service experience to private events across Alabama, Tennessee, Mississippi, and Georgia. As the owner of Polished Pours with Crystal, she focuses on creating a polished, welcoming beverage experience that feels organized, personal, and appropriate for the occasion.
 
 Crystal is supported by a capable team of service-minded professionals with experience in event service, planning support, guest care, setup, coordination, and event-day logistics. Together, they help hosts create a beverage service experience that feels smooth, prepared, and elevated from start to finish.
 
 Her approach is built around hospitality first. Whether the event is a wedding, corporate gathering, private party, or special celebration, Crystal and her team bring warmth, professionalism, and presence to the guest experience. The goal is simple: make guests feel cared for while helping the host feel supported.
 
-From the first inquiry to the event itself, Crystal’s Beverage Catering Service is designed to feel professional, approachable, and refined. The service is about more than beverages. It is part of the atmosphere, flow, and memory of the event.
+From the first inquiry to the event itself, Polished Pours with Crystal is designed to feel professional, approachable, and refined. The service is about more than beverages. It is part of the atmosphere, flow, and memory of the event.
 
-Image caption: Meet Crystal Bruce, owner of Crystal’s Beverage Catering Service.
+Image caption: Meet Crystal Bruce, owner of Polished Pours with Crystal.
 
 ## Service option cards
 
@@ -76,7 +77,7 @@ Do not show prices.
 ## FAQ
 
 Q: What types of events do you support?
-A: Crystal’s Beverage Catering Service supports private events, weddings, corporate events, parties, and special celebrations.
+A: Polished Pours with Crystal supports private events, weddings, corporate events, parties, and special celebrations.
 
 Q: What areas do you serve?
 A: Service is available across Alabama, Tennessee, Mississippi, and Georgia by custom quote and availability.

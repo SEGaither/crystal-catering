@@ -74,4 +74,4 @@ Private event bartender service for host-supplied beverages.
 
 ## Boundary Statement
 
-Crystal's Beverage Catering Service provides bartender labor, setup support, and guest service for private events. Alcohol, if served, must be provided by the host or venue and confirmed according to applicable venue, local, and state requirements.
+Polished Pours with Crystal provides bartender labor, setup support, and guest service for private events. Alcohol, if served, must be provided by the host or venue and confirmed according to applicable venue, local, and state requirements.

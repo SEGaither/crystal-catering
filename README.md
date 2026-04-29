@@ -1,4 +1,4 @@
-# Crystal’s Beverage Catering Service — Website Build Package
+# Polished Pours with Crystal — Website Build Package
 
 Version: v0.1
 
@@ -8,13 +8,13 @@ ChatGPT creates this single zip package. The user unzips it and creates/opens th
 
 ## Project
 
-Crystal’s Beverage Catering Service is a public-facing, SEO-ready landing page for a full-service beverage catering service operated by Crystal Bruce.
+Polished Pours with Crystal is a public-facing, SEO-ready landing page for a private event bartender and beverage service operated by Crystal Bruce.
 
 ## Known facts
 
 - Owner: Crystal Bruce
 - Service area: Alabama, Tennessee, Mississippi, Georgia
-- Service: beverage catering for private events
+- Service: private event bartender and beverage service for host-supplied beverages
 - Event types: weddings, corporate events, private parties, special celebrations
 - Phone: 256-614-2510
 - Email: cbruce.dce@gmail.com
@@ -23,11 +23,13 @@ Crystal’s Beverage Catering Service is a public-facing, SEO-ready landing page
 - Tone: upscale
 - Primary CTA: Request an Event Quote
 - Secondary CTA: Check My Event Date
-- Provisional corrected domain: CBbeveragecatering.com
+- Domain: https://www.cbbeveragecatering.com
 
 ## Claim boundary
 
 Do not claim alcohol service, licensing, insurance, certifications, testimonials, reviews, awards, prices, venue approval, guaranteed availability, or guaranteed outcomes unless the owner later supplies verification.
+
+Crystal provides bartender labor, setup support, and guest-focused beverage service for host-supplied beverages. Alcohol, if served, is supplied by the host or venue, not by the business.
 
 ## How to use this package
 

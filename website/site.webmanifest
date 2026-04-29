@@ -1,7 +1,7 @@
 {
-  "name": "Crystal's Beverage Catering Service",
-  "short_name": "Crystal's Catering",
-  "description": "Upscale beverage catering for private events across Alabama, Tennessee, Mississippi, and Georgia.",
+  "name": "Polished Pours with Crystal",
+  "short_name": "Polished Pours",
+  "description": "Private event bartender and beverage service for host-supplied beverages across Alabama, Tennessee, Mississippi, and Georgia.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#2b2723",
