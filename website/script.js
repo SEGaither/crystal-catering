@@ -204,7 +204,10 @@
   function openChatbot() {
     if (!chatPanel) return;
     chatPanel.hidden = false;
-    if (chatToggle) chatToggle.setAttribute('aria-expanded', 'true');
+    if (chatToggle) {
+      chatToggle.hidden = true;
+      chatToggle.setAttribute('aria-expanded', 'true');
+    }
     if (chatClose) chatClose.focus();
   }
 
@@ -212,6 +215,7 @@
     if (!chatPanel) return;
     chatPanel.hidden = true;
     if (chatToggle) {
+      chatToggle.hidden = false;
       chatToggle.setAttribute('aria-expanded', 'false');
       chatToggle.focus();
     }

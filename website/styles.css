@@ -1009,6 +1009,7 @@ ul {
   background: var(--charcoal-mid);
   border-color: var(--gold-dark);
 }
+.chatbot-toggle[hidden] { display: none; }
 
 .chatbot-icon {
   display: flex;
