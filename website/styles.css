@@ -1027,6 +1027,7 @@ ul {
   overflow: hidden;
   max-height: 500px;
 }
+.chatbot-panel[hidden] { display: none; }
 
 .chatbot-header {
   background: var(--charcoal);
