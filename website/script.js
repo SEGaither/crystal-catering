@@ -145,72 +145,51 @@
   }
 
   /* ----------------------------------------------------------
-     FAQ CHATBOT — static keyword-matched responses
+     AI CHATBOT — async OpenAI-powered responses
   ---------------------------------------------------------- */
-  var FAQ_DATA = [
-    {
-      keywords: ['what event', 'type of event', 'kind of event', 'support', 'do you do'],
-      answer: "Crystal’s Beverage Catering Service supports weddings, corporate events, private parties, and special celebrations."
-    },
-    {
-      keywords: ['wedding', 'weddings'],
-      answer: "Yes, weddings are one of our most common events. Crystal and her team bring a polished, organized presence to your wedding day."
-    },
-    {
-      keywords: ['corporate'],
-      answer: "Crystal’s Beverage Catering Service supports corporate events, receptions, and company celebrations with a professional service presence."
-    },
-    {
-      keywords: ['area', 'state', 'where', 'location', 'serve', 'coverage', 'alabama', 'tennessee', 'mississippi', 'georgia'],
-      answer: "Service is available across Alabama, Tennessee, Mississippi, and Georgia by custom quote and availability."
-    },
-    {
-      keywords: ['quote', 'request', 'inquiry', 'get a quote', 'how do i'],
-      answer: "You can request a quote using the form on this page, emailing cbruce.dce@gmail.com, or calling Crystal at 256-614-2510."
-    },
-    {
-      keywords: ['date', 'available', 'availability', 'check my', 'open date', 'booked'],
-      answer: "Include your event date in the quote form or contact Crystal directly. Date availability is confirmed during consultation."
-    },
-    {
-      keywords: ['beverage', 'drink', 'preference', 'custom', 'service needs'],
-      answer: "Beverage preferences and service needs are discussed during consultation so the service can be planned around your event."
-    },
-    {
-      keywords: ['price', 'pricing', 'cost', 'fee', 'how much', 'rate', 'package', 'packages'],
-      answer: "No pricing is listed online. Custom quotes are prepared based on your event details, location, service needs, and availability."
-    },
-    {
-      keywords: ['information', 'provide', 'tell you', 'need to know', 'details', 'what do i need'],
-      answer: "Helpful details include your event date, location, event type, guest count, contact information, and beverage preferences or service needs."
-    },
-    {
-      keywords: ['guarantee', 'guaranteed', 'confirmed', 'promise', 'locked in'],
-      answer: "Service details, availability, and beverage arrangements are confirmed during consultation. Nothing is guaranteed prior to consultation."
-    },
-    {
-      keywords: ['crystal', 'owner', 'who is', 'about crystal', 'experience'],
-      answer: "Crystal Bruce is the owner of Crystal’s Beverage Catering Service. She brings years of beverage service experience to private events."
-    },
-    {
-      keywords: ['phone', 'call', 'email', 'contact', 'reach'],
-      answer: "You can reach Crystal by phone at 256-614-2510 or by email at cbruce.dce@gmail.com."
-    }
-  ];
+  var conversationHistory = [];
+  var CHAT_ERROR_MSG = ‘Something went wrong — you can reach Crystal directly at 256-614-2510 or use the quote form on this page.’;
 
-  var FALLBACK = "I’m not sure about that, but Crystal can help! Use the quote form on this page, call 256-614-2510, or email cbruce.dce@gmail.com.";
+  function addTypingIndicator() {
+    if (!chatMsgs) return null;
+    var el = document.createElement(‘div’);
+    el.className = ‘chat-msg bot’;
+    el.textContent = ‘Typing…’;
+    chatMsgs.appendChild(el);
+    chatMsgs.scrollTop = chatMsgs.scrollHeight;
+    return el;
+  }
 
-  function getBotResponse(query) {
-    var q = query.toLowerCase();
-    for (var i = 0; i < FAQ_DATA.length; i++) {
-      var item = FAQ_DATA[i];
-      for (var j = 0; j < item.keywords.length; j++) {
-        if (q.indexOf(item.keywords[j]) !== -1) {
-          return item.answer;
+  function removeTypingIndicator(el) {
+    if (el && el.parentNode) el.parentNode.removeChild(el);
+  }
+
+  function setInputDisabled(disabled) {
+    if (chatInput) chatInput.disabled = disabled;
+    if (chatSend) chatSend.disabled = disabled;
+  }
+
+  function sendToAI(text, callback) {
+    conversationHistory.push({ role: ‘user’, content: text });
+    fetch(‘/api/chat’, {
+      method: ‘POST’,
+      headers: { ‘Content-Type’: ‘application/json’ },
+      body: JSON.stringify({ messages: conversationHistory })
+    })
+      .then(function (res) { return res.json(); })
+      .then(function (data) {
+        if (data.reply) {
+          conversationHistory.push({ role: ‘assistant’, content: data.reply });
+          callback(null, data.reply);
+        } else {
+          conversationHistory.pop();
+          callback(new Error(‘no reply’));
         }
-      }
-    }
-    return FALLBACK;
+      })
+      .catch(function () {
+        conversationHistory.pop();
+        callback(new Error(‘fetch error’));
+      });
   }
 
   var chatToggle  = document.getElementById('chatbot-toggle');
@@ -264,8 +243,14 @@
     removePrompts();
     addMessage(text, 'user');
     if (chatInput) chatInput.value = '';
-    var response = getBotResponse(text);
-    setTimeout(function () { addMessage(response, 'bot'); }, 320);
+    setInputDisabled(true);
+    var typingEl = addTypingIndicator();
+    sendToAI(text, function (err, reply) {
+      removeTypingIndicator(typingEl);
+      setInputDisabled(false);
+      addMessage(err ? CHAT_ERROR_MSG : reply, 'bot');
+      if (chatInput) chatInput.focus();
+    });
   }
 
   if (chatToggle) chatToggle.addEventListener('click', openChatbot);
