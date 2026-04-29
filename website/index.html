@@ -622,14 +622,14 @@
       id="chatbot-toggle"
       aria-expanded="false"
       aria-controls="chatbot-panel"
-      aria-label="Open FAQ assistant"
+      aria-label="Open chat"
     >
       <span class="chatbot-icon" aria-hidden="true">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true" focusable="false">
           <path d="M18 2H2a1 1 0 00-1 1v11a1 1 0 001 1h3l3 3 3-3h7a1 1 0 001-1V3a1 1 0 00-1-1z" fill="currentColor" opacity=".9"/>
         </svg>
       </span>
-      <span class="chatbot-label">Have a question?</span>
+      <span class="chatbot-label">Chat with us</span>
     </button>
 
     <div
@@ -637,17 +637,17 @@
       id="chatbot-panel"
       hidden
       role="dialog"
-      aria-label="FAQ Assistant"
+      aria-label="Chat with us"
       aria-modal="false"
     >
       <div class="chatbot-header">
-        <span>FAQ Assistant</span>
-        <button class="chatbot-close" id="chatbot-close" aria-label="Close FAQ assistant">&#10005;</button>
+        <span>Chat with us</span>
+        <button class="chatbot-close" id="chatbot-close" aria-label="Close chat">&#10005;</button>
       </div>
 
       <div class="chatbot-messages" id="chatbot-messages" aria-live="polite" aria-atomic="false">
         <div class="chat-msg bot">
-          Hi! I can answer common questions about Crystal's Beverage Catering Service. What would you like to know?
+          Hi! I'm here to help with questions about Crystal's Beverage Catering Service. What can I help you with?
         </div>
         <div class="chat-prompts" id="chat-prompts">
           <button class="chat-prompt">What events do you serve?</button>
@@ -669,7 +669,7 @@
           id="chatbot-input"
           class="chatbot-input"
           placeholder="Ask a question&hellip;"
-          aria-label="Type your FAQ question"
+          aria-label="Type your question"
           autocomplete="off"
         >
         <button class="chatbot-send" id="chatbot-send" aria-label="Send message">&#8594;</button>
